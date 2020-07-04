@@ -2,6 +2,17 @@
 People counter app helps in counting the number of people in the frame in real time, average duration of people in the frame and the total count of people
 
 People counting applications can be used in various scenarios and applications like retail store, supermarket, shopping malls, airport. For example, Once a person is detected, We can follow or track the object which can be used for further analysis to understand certain behaviours like time spent shopping , to avoid long queues in billing counters etc.
+## Requirements
+ ### Hardware
+  * 6th to 10th generation Intel® Core™ processor with Iris® Pro graphics or Intel® HD Graphics.
+  * OR  Intel® Neural Compute Stick 2 (NCS2)
+
+ ### Software
+  * Intel® Distribution of OpenVINO™ toolkit 2019 R3 or higher release
+  * Node v6.17.1
+  * Npm v3.10.10
+  * CMake
+  * MQTT Mosca server
 ## Stepup
 ### Openvino installation:
   To run the application in this tutorial, the OpenVINO™ toolkit and its dependencies must already be installed and verified using the included demos.
@@ -10,7 +21,7 @@ People counting applications can be used in various scenarios and applications l
   [Linux](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html)
   [Mac](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_macos.html)
   
-  ### Install Npm
+  ### Install Npm:
   There are three components that need to be running in separate terminals for this application to work:
   * MQTT Mosca server
   * Node.js* Web server
