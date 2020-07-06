@@ -105,3 +105,20 @@ For running on  Intel® Neural Compute Stick
 python3.5 main.py -d MYRIAD -i resources/Pedestrian_Detect_2_1_1.mp4 -m model/frozen_inference_graph.xml  -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
 ```
 To see the output on a web based interface, open the link http://0.0.0.0:3004/ in a browser.
+
+Using Camera stream:
+To get the input video from the camera, use -i CAM command-line argument. Specify the resolution of the camera using -video_size command line argument.
+
+For example:
+
+python3 main.py -i CAM -m model/frozen_inference_graph.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://localhost:8090/fac.ffm
+
+Note: User has to give -video_size command line argument according to the input as it is used to specify the resolution of the video or image file.
+
+Using image :
+To get the input video from the camera, use -i CAM command-line argument. Specify the resolution of the camera using -video_size command line argument.
+
+For example:
+
+python3 main.py -i <image_file_path> -m model/frozen_inference_graph.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6
+To see the output open the output.jpg file in person counter app directory.
