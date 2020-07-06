@@ -122,3 +122,5 @@ For example:
 
 python3 main.py -i <image_file_path> -m model/frozen_inference_graph.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6
 To see the output open the output.jpg file in person counter app directory.
+
+![Sample Output Image](https://github.com/AarthiAlagammai/Openvino-people_counter_IoT_app/blob/master/resources/people-counter-image.png)
