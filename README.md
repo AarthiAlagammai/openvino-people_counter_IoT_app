@@ -99,9 +99,9 @@ For running on the GPU
 ```
 python3 main.py -i resources/Pedestrian_Detect_2_1_1.mp4 -m model/frozen_inference_graph.xml -d GPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://localhost:8090/fac.ffm
 ```
-To see the output on a web based interface, open the link http://0.0.0.0:3004/ in a browser.
 
 For running on  Intel® Neural Compute Stick
 ```
 python3.5 main.py -d MYRIAD -i resources/Pedestrian_Detect_2_1_1.mp4 -m model/frozen_inference_graph.xml  -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
 ```
+To see the output on a web based interface, open the link http://0.0.0.0:3004/ in a browser.
